@@ -16,12 +16,14 @@ export type ProcessResult = {
 export type FileJob = {
   id: string;
   file: File;
+  originalFile: File;
+  originalDimensions: { width: number; height: number } | null;
   originalUrl: string;
   status: 'idle' | 'uploading' | 'complete' | 'error';
   uploadProgress: number;
   processedUrl: string | null;
   blob: Blob | null;
-  contentType: string;
+  contentType: string | null;
   originalSize: number | null;
   resultSize: number | null;
   reductionPct: number | null;
