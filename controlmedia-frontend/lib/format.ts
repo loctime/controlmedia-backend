@@ -16,3 +16,16 @@ export function extensionFromContentType(ct: string): string {
       return 'bin';
   }
 }
+
+/**
+ * Formats a byte count as a human-readable string.
+ * Examples: 0 → '0 B', 1023 → '1023 B', 1024 → '1.0 KB', 1048576 → '1.0 MB'
+ */
+export function formatBytes(bytes: number): string {
+  if (!Number.isFinite(bytes)) return '';
+  if (bytes < 1024) return `${bytes} B`;
+  const kb = bytes / 1024;
+  if (kb < 1024) return `${kb.toFixed(1)} KB`;
+  const mb = kb / 1024;
+  return `${mb.toFixed(1)} MB`;
+}
