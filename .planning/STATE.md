@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-05-22)
 ## Current Position
 
 Phase: 1 of 5 (Backend Core + Image API)
-Plan: 0 of 3 in current phase
-Status: Ready to execute
-Last activity: 2026-05-22 — Phase 1 planned (3 plans in 3 waves)
+Plan: 1 of 3 in current phase
+Status: Executing
+Last activity: 2026-05-22 — Plan 01-01 complete (Express scaffold)
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [██░░░░░░░░] 7% (1/14 plans across all phases)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 0
-- Average duration: —
-- Total execution time: 0 hours
+- Total plans completed: 1
+- Average duration: 15 min
+- Total execution time: 0.25 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| Phase 1 | 1 | 15 min | 15 min |
 
 **Recent Trend:**
-- Last 5 plans: —
-- Trend: —
+- Last 5 plans: 01-01 (15 min)
+- Trend: baseline established
 
 *Updated after each plan completion*
 
@@ -48,6 +48,9 @@ Recent decisions affecting current work:
 - Init: p-limit(3) + sharp.concurrency(1) for batch image processing
 - Init: CORS via regex pattern to cover Vercel preview URLs
 - Init: Video trim (VID-05) folded into Phase 3 backend — just -ss/-to FFmpeg flags, no separate phase needed
+- 01-01: errorHandler extracted to src/middleware/errorHandler.js (not inline in index.js) for reuse
+- 01-01: imageUploadArray exported directly as multer().array('files', 20) — simpler batch route consumption
+- 01-01: sharp.concurrency(1) + sharp.cache(false) placed in upload.js at module load (not per-request)
 
 ### Pending Todos
 
@@ -72,5 +75,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-05-22
-Stopped at: Phase 1 context gathered — ready to plan Phase 1
-Resume file: .planning/phases/01-backend-core-image-api/01-CONTEXT.md
+Stopped at: Plan 01-01 complete — Express scaffold with CORS, multer, health, render.yaml
+Resume file: .planning/phases/01-backend-core-image-api/01-02-PLAN.md
