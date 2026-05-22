@@ -86,13 +86,13 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| IMG-01 | Phase 1 (backend accept) + Phase 2 (frontend upload) | Pending |
-| IMG-02 | Phase 1 (Sharp compress) + Phase 2 (quality slider UI) | Pending |
+| IMG-01 | Phase 1 (backend accept) + Phase 2 (frontend upload) | Backend done (01-02) |
+| IMG-02 | Phase 1 (Sharp compress) + Phase 2 (quality slider UI) | Backend done (01-02) |
 | IMG-03 | Phase 2 (react-compare-slider) | Pending |
-| IMG-04 | Phase 1 (Sharp resize) + Phase 2 (resize inputs UI) | Pending |
-| IMG-05 | Phase 1 (Sharp format convert) + Phase 2 (format selector UI) | Pending |
-| IMG-06 | Phase 2 (download button) | Pending |
-| IMG-07 | Phase 1 (response metadata) + Phase 2 (size readout UI) | Pending |
+| IMG-04 | Phase 1 (Sharp resize) + Phase 2 (resize inputs UI) | Backend done (01-02) |
+| IMG-05 | Phase 1 (Sharp format convert) + Phase 2 (format selector UI) | Backend done (01-02) |
+| IMG-06 | Phase 2 (download button) | Backend done (01-02) |
+| IMG-07 | Phase 1 (response metadata) + Phase 2 (size readout UI) | Backend done (01-02) |
 | BATCH-01 | Phase 1 (batch endpoint) + Phase 2 (batch upload UI) | Pending |
 | BATCH-02 | Phase 1 (archiver ZIP) + Phase 2 (ZIP download button) | Pending |
 | BATCH-03 | Phase 2 (batch progress counter UI) | Pending |
@@ -110,13 +110,13 @@
 | PRE-04 | Phase 5 | Pending |
 | PRE-05 | Phase 5 | Pending |
 | PRE-06 | Phase 5 | Pending |
-| GEN-01 | Phase 1 (no auth on Express routes) | Pending |
-| GEN-02 | Phase 1 (processing in memory/tmp, no persistence) | Pending |
-| GEN-03 | Phase 1 (multer HEIC reject) + Phase 2 (frontend HEIC gate) | Pending |
-| GEN-04 | Phase 1 (cleanup subsystem: finally + setInterval sweep) | Pending |
+| GEN-01 | Phase 1 (no auth on Express routes) | Backend done (01-01) |
+| GEN-02 | Phase 1 (processing in memory/tmp, no persistence) | Backend done (01-02) |
+| GEN-03 | Phase 1 (multer HEIC reject) + Phase 2 (frontend HEIC gate) | Backend done (01-01) |
+| GEN-04 | Phase 1 (cleanup subsystem: finally + setInterval sweep) | Partial (01-01 stub; 01-03 finalizes) |
 
 **Coverage:** 28/28 requirements mapped (100%)
 
 ---
 
-*Last updated: 2026-05-22 after roadmap creation*
+*Last updated: 2026-05-22 after plan 01-02 completion*

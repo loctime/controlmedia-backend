@@ -35,7 +35,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 Plans:
 - [x] 01-01: Express app scaffold — project init, multer, CORS regex, health endpoint, Render deploy config
-- [ ] 01-02: Image processing pipeline — Sharp compress/resize/convert with p-limit(3), decompression bomb guard, response with size metadata
+- [x] 01-02: Image processing pipeline — Sharp compress/resize/convert with p-limit(3), decompression bomb guard, response with size metadata
 - [ ] 01-03: Batch endpoint + ZIP — archiver streaming ZIP, HEIC block, cleanup subsystem (finally blocks + setInterval sweep)
 
 ### Phase 2: Frontend Image Tool
@@ -118,7 +118,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Backend Core + Image API | 1/3 | In progress | - |
+| 1. Backend Core + Image API | 2/3 | In progress | - |
 | 2. Frontend Image Tool | 0/3 | Not started | - |
 | 3. Backend Video Processing | 0/3 | Not started | - |
 | 4. Frontend Video Tool | 0/3 | Not started | - |
