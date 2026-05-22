@@ -67,7 +67,7 @@ Plans:
 
 **Wave 2** *(blocked on Wave 1 completion)*
 
-- [ ] 02-02: Image options panel + results — quality slider, resize inputs, format selector, size readout (original/result/%), download button
+- [x] 02-02: Image options panel + results — quality slider, resize inputs, format selector, size readout (original/result/%), download button
 
 **Wave 3** *(blocked on Wave 2 completion)*
 
@@ -147,7 +147,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Backend Core + Image API | 3/3 | Complete | 2026-05-22 |
-| 2. Frontend Image Tool | 1/3 | In Progress|  |
+| 2. Frontend Image Tool | 2/3 | In Progress|  |
 | 3. Backend Video Processing | 0/3 | Not started | - |
 | 4. Frontend Video Tool | 0/3 | Not started | - |
 | 5. Platform Presets + Polish | 0/2 | Not started | - |
