@@ -3,6 +3,7 @@ import express from 'express'
 import { corsMiddleware } from './middleware/cors.js'
 import { errorHandler } from './middleware/errorHandler.js'
 import healthRouter from './routes/health.js'
+import imagesRouter from './routes/images.js'
 import { startCleanupSweep } from './utils/cleanup.js'
 
 const app = express()
@@ -19,8 +20,12 @@ app.use(express.json())
 // 3. Health check — required for Render health checks (render.yaml healthCheckPath: /health)
 app.use('/health', healthRouter)
 
+// 4. Image processing routes — single image process + batch (Plan 01-02, 01-03)
+//    MUST be before errorHandler so multer errors propagate correctly
+app.use('/api/images', imagesRouter)
+
 // ─── Error handler ──────────────────────────────────────────────────────────────
-// 4. Error handler MUST be last — after all routes (4-argument signature required by Express)
+// 5. Error handler MUST be last — after all routes (4-argument signature required by Express)
 app.use(errorHandler)
 
 // ─── Startup ────────────────────────────────────────────────────────────────────
