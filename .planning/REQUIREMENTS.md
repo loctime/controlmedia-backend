@@ -84,14 +84,39 @@
 
 ## Traceability
 
-| REQ-ID | Phase |
-|--------|-------|
-| IMG-01 → IMG-07 | Fase 1 (Backend) + Fase 2 (Frontend) |
-| BATCH-01 → BATCH-03 | Fase 1 (Backend) + Fase 2 (Frontend) |
-| VID-01 → VID-08 | Fase 3 (Backend) + Fase 4 (Frontend) |
-| PRE-01 → PRE-06 | Fase 5 |
-| GEN-01 → GEN-04 | Transversal — Fase 1 establece base |
+| Requirement | Phase | Status |
+|-------------|-------|--------|
+| IMG-01 | Phase 1 (backend accept) + Phase 2 (frontend upload) | Pending |
+| IMG-02 | Phase 1 (Sharp compress) + Phase 2 (quality slider UI) | Pending |
+| IMG-03 | Phase 2 (react-compare-slider) | Pending |
+| IMG-04 | Phase 1 (Sharp resize) + Phase 2 (resize inputs UI) | Pending |
+| IMG-05 | Phase 1 (Sharp format convert) + Phase 2 (format selector UI) | Pending |
+| IMG-06 | Phase 2 (download button) | Pending |
+| IMG-07 | Phase 1 (response metadata) + Phase 2 (size readout UI) | Pending |
+| BATCH-01 | Phase 1 (batch endpoint) + Phase 2 (batch upload UI) | Pending |
+| BATCH-02 | Phase 1 (archiver ZIP) + Phase 2 (ZIP download button) | Pending |
+| BATCH-03 | Phase 2 (batch progress counter UI) | Pending |
+| VID-01 | Phase 3 (multer diskStorage) + Phase 4 (upload UI) | Pending |
+| VID-02 | Phase 3 (CRF flag) + Phase 4 (CRF slider UI) | Pending |
+| VID-03 | Phase 3 (resolution presets) + Phase 4 (resolution selector UI) | Pending |
+| VID-04 | Phase 3 (FFmpeg format convert) + Phase 4 (format selector UI) | Pending |
+| VID-05 | Phase 3 (FFmpeg -ss/-to flags) + Phase 4 (trim inputs UI) | Pending |
+| VID-06 | Phase 3 (SSE endpoint) + Phase 4 (processing progress bar UI) | Pending |
+| VID-07 | Phase 3 (GET download stream) + Phase 4 (download button UI) | Pending |
+| VID-08 | Phase 3 (size metadata) + Phase 4 (size readout UI) | Pending |
+| PRE-01 | Phase 5 | Pending |
+| PRE-02 | Phase 5 | Pending |
+| PRE-03 | Phase 5 | Pending |
+| PRE-04 | Phase 5 | Pending |
+| PRE-05 | Phase 5 | Pending |
+| PRE-06 | Phase 5 | Pending |
+| GEN-01 | Phase 1 (no auth on Express routes) | Pending |
+| GEN-02 | Phase 1 (processing in memory/tmp, no persistence) | Pending |
+| GEN-03 | Phase 1 (multer HEIC reject) + Phase 2 (frontend HEIC gate) | Pending |
+| GEN-04 | Phase 1 (cleanup subsystem: finally + setInterval sweep) | Pending |
+
+**Coverage:** 28/28 requirements mapped (100%)
 
 ---
 
-*Last updated: 2026-05-22 after initialization*
+*Last updated: 2026-05-22 after roadmap creation*
