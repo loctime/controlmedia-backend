@@ -1,0 +1,14 @@
+services:
+  - name: controlmedia-backend
+    type: web
+    runtime: node
+    buildCommand: npm install
+    startCommand: node src/index.js
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: "20"
+      - key: ALLOWED_ORIGIN
+        sync: false  # Set in Render dashboard — production frontend URL
