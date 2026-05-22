@@ -1,0 +1,23 @@
+{
+  "name": "controlmedia-backend",
+  "version": "1.0.0",
+  "description": "Backend API for ControlMedia — image and video optimization service",
+  "type": "module",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "express": "5.2.1",
+    "sharp": "0.34.5",
+    "multer": "2.1.1",
+    "archiver": "8.0.0",
+    "p-limit": "7.3.0",
+    "cors": "2.8.6",
+    "dotenv": "^16.0.0"
+  }
+}
