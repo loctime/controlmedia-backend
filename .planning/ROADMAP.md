@@ -12,7 +12,7 @@ ControlMedia is built in five vertical phases. Phase 1 establishes the Express b
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Backend Core + Image API** - Express backend with full image processing: compress, resize, convert, batch ZIP, cleanup, CORS
+- [x] **Phase 1: Backend Core + Image API** - Express backend with full image processing: compress, resize, convert, batch ZIP, cleanup, CORS
 - [ ] **Phase 2: Frontend Image Tool** - Next.js image UI with drag-drop, quality slider, before/after comparison, batch, HEIC gate
 - [ ] **Phase 3: Backend Video Processing** - Async FFmpeg jobs: compress, resize, format convert, trim, SSE progress, cleanup
 - [ ] **Phase 4: Frontend Video Tool** - Video upload UI with two-phase progress (uploading → processing), options panel, download
@@ -36,7 +36,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 Plans:
 - [x] 01-01: Express app scaffold — project init, multer, CORS regex, health endpoint, Render deploy config
 - [x] 01-02: Image processing pipeline — Sharp compress/resize/convert with p-limit(3), decompression bomb guard, response with size metadata
-- [ ] 01-03: Batch endpoint + ZIP — archiver streaming ZIP, HEIC block, cleanup subsystem (finally blocks + setInterval sweep)
+- [x] 01-03: Batch endpoint + ZIP — archiver streaming ZIP, HEIC block, cleanup subsystem (finally blocks + setInterval sweep)
 
 ### Phase 2: Frontend Image Tool
 **Mode:** mvp
@@ -118,7 +118,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Backend Core + Image API | 2/3 | In progress | - |
+| 1. Backend Core + Image API | 3/3 | Complete | 2026-05-22 |
 | 2. Frontend Image Tool | 0/3 | Not started | - |
 | 3. Backend Video Processing | 0/3 | Not started | - |
 | 4. Frontend Video Tool | 0/3 | Not started | - |

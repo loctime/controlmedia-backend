@@ -9,28 +9,28 @@ See: .planning/PROJECT.md (updated 2026-05-22)
 
 ## Current Position
 
-Phase: 1 of 5 (Backend Core + Image API)
-Plan: 2 of 3 in current phase
-Status: Executing
-Last activity: 2026-05-22 — Plan 01-02 complete (Image processing pipeline)
+Phase: 1 of 5 (Backend Core + Image API) — COMPLETE
+Plan: 3 of 3 in current phase (phase done — next: Phase 2)
+Status: Ready for Phase 2
+Last activity: 2026-05-22 — Plan 01-03 complete (Batch endpoint + ZIP + Cleanup)
 
-Progress: [███░░░░░░░] 14% (2/14 plans across all phases)
+Progress: [████░░░░░░] 21% (3/14 plans across all phases)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 2
-- Average duration: 18 min
-- Total execution time: 0.58 hours
+- Total plans completed: 3
+- Average duration: 14 min
+- Total execution time: 0.72 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| Phase 1 | 2 | 35 min | 18 min |
+| Phase 1 | 3 | 43 min | 14 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (15 min), 01-02 (20 min)
+- Last 5 plans: 01-01 (15 min), 01-02 (20 min), 01-03 (8 min)
 - Trend: stable
 
 *Updated after each plan completion*
@@ -54,6 +54,9 @@ Recent decisions affecting current work:
 - 01-02: Size metadata in response headers (X-Original-Size, X-Result-Size, X-Reduction-Pct) not JSON wrapper — allows binary blob response + header read simultaneously
 - 01-02: Access-Control-Expose-Headers set in route handler for image endpoint specifically
 - 01-02: TDD with Node.js built-in node:test runner — no new test framework dependency
+- 01-03: archiver v8 changed API from factory function to named class export (ZipArchive) — discovered at runtime, fixed inline
+- 01-03: cleanup sweep uses fs.access ENOENT guard before readdir — Phase 1 never creates /tmp/jobs/ (memoryStorage), ENOENT is normal
+- 01-03: per-entry try/catch in cleanup loop — prevents one bad entry from aborting full sweep
 
 ### Pending Todos
 
@@ -78,5 +81,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-05-22
-Stopped at: Plan 01-02 complete — processImage service + POST /api/images/process endpoint
-Resume file: .planning/phases/01-backend-core-image-api/01-03-PLAN.md
+Stopped at: Plan 01-03 complete — Phase 1 backend fully done (batch ZIP + cleanup sweep)
+Resume file: .planning/phases/02-frontend-image-tool/02-01-PLAN.md (Phase 2)
