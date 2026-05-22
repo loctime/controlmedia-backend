@@ -7,6 +7,7 @@ import { ProgressBar } from '@/components/ProgressBar';
 import { DownloadButton } from '@/components/DownloadButton';
 import { ImageOptionsPanel } from '@/components/ImageOptionsPanel';
 import { SizeReadout } from '@/components/SizeReadout';
+import { BeforeAfterSlider } from '@/components/BeforeAfterSlider';
 import type { ProcessOptions } from '@/types/image';
 
 export function SingleImageTool() {
@@ -26,10 +27,18 @@ export function SingleImageTool() {
 
   return (
     <div className="space-y-6">
-      {/* Image previews */}
-      <div className="grid grid-cols-2 gap-4">
+      {/* Before/after comparison slider (shown after processing completes) */}
+      {job.status === 'complete' ? (
         <div>
-          <p className="text-sm text-gray-500 mb-2">Original</p>
+          <h2 className="text-lg font-semibold text-gray-800 mb-3">Comparación antes / después</h2>
+          <BeforeAfterSlider
+            originalUrl={job.originalUrl}
+            processedUrl={job.processedUrl}
+          />
+        </div>
+      ) : (
+        /* Original preview while uploading/processing */
+        <div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={job.originalUrl}
@@ -37,19 +46,7 @@ export function SingleImageTool() {
             className="max-h-64 w-full rounded-lg border border-gray-200 object-contain"
           />
         </div>
-
-        {job.status === 'complete' && job.processedUrl && (
-          <div>
-            <p className="text-sm text-gray-500 mb-2">Optimizada</p>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={job.processedUrl}
-              alt="Optimizada"
-              className="max-h-64 w-full rounded-lg border border-gray-200 object-contain"
-            />
-          </div>
-        )}
-      </div>
+      )}
 
       {/* Upload progress */}
       {job.status === 'uploading' && job.uploadProgress < 100 && (

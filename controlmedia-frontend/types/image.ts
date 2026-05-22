@@ -5,6 +5,14 @@ export type ProcessOptions = {
   height?: number;
 };
 
+export type BatchJob = {
+  files: File[];
+  status: 'idle' | 'uploading' | 'processing' | 'complete' | 'error';
+  uploadProgress: number;
+  zipBlob: Blob | null;
+  error: string | null;
+};
+
 export type ProcessResult = {
   blob: Blob;
   contentType: string;

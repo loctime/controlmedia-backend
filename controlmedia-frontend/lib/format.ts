@@ -3,6 +3,7 @@
  * Falls back to 'bin' for unknown types.
  */
 export function extensionFromContentType(ct: string): string {
+  if (ct.startsWith('application/zip')) return 'zip';
   switch (ct) {
     case 'image/jpeg':
       return 'jpg';
